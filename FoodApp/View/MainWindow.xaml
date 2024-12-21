@@ -1,0 +1,57 @@
+﻿<Window
+    x:Class="FoodApp.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:FoodApp"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="1080"
+    Height="720"
+    MinWidth="400"
+    MinHeight="300"
+    mc:Ignorable="d">
+
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel>
+            <Button
+                Height="25"
+                Command="{Binding NavigateToRecipesCommand}"
+                Content="Recipes" />
+            <Button
+                Height="25"
+                Command="{Binding NavigateToMenusCommand}"
+                Content="Menu templates" />
+            <Button
+                Height="25"
+                Command="{Binding NavigateToMealPlannerCommand}"
+                Content="Meal planner" />
+            <Button
+                Height="25"
+                Command="{Binding NavigateToShoppingListCommand}"
+                Content="Shopping list" />
+            <Button
+                Height="25"
+                Command="{Binding NavigateToAddRecipeCommand}"
+                Content="temp:AddRecipe" />
+            <Button
+                Height="25"
+                Command="{Binding NavigateToRecipeCommand}"
+                Content="temp:Recipe" />
+            <Button
+                Height="25"
+                Command="{Binding NavigateToIngredientsListCommand}"
+                Content="temp:Ingredients" />
+
+        </StackPanel>
+
+        <ContentControl
+            Grid.Column="1"
+            Content="{Binding Navigation.CurrentView}" />
+    </Grid>
+</Window>

@@ -1,0 +1,31 @@
+﻿<Application
+    x:Class="FoodApp.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:FoodApp" xmlns:view="clr-namespace:FoodApp.View"
+    xmlns:viewmodel="clr-namespace:FoodApp.ViewModel">
+    <Application.Resources>
+        <DataTemplate DataType="{x:Type TypeName=viewmodel:RecipeViewModel}">
+            <view:RecipeView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type TypeName=viewmodel:AddRecipeViewModel}">
+            <view:AddRecipeView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type TypeName=viewmodel:MealPlannerViewModel}">
+            <view:MealPlannerView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type TypeName=viewmodel:ShoppingListViewModel}">
+            <view:ShoppingListView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type TypeName=viewmodel:MenusViewModel}">
+            <view:MenusView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type TypeName=viewmodel:RecipesViewModel}">
+            <view:RecipesView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type TypeName=viewmodel:IngredientsListViewModel}">
+            <view:IngredientsListView />
+        </DataTemplate>
+
+    </Application.Resources>
+</Application>
